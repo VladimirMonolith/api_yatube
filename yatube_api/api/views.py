@@ -1,11 +1,15 @@
 from django.shortcuts import get_object_or_404
 from posts.models import Group, Post
+"""
+У меня модели лежат в приложении posts.
+Не понимаю как их получить от туда по другому
+"""
 from rest_framework import filters, mixins, permissions, viewsets
 
 from .permissions import IsAuthorOrReadOnly
-from .serializers import (CommentSerializer, FollowSerializer, GroupSerializer,
-                          PostSerializer)
-
+from .serializers import (
+    CommentSerializer, FollowSerializer, GroupSerializer, PostSerializer
+)
 
 class PostViewSet(viewsets.ModelViewSet):
     """Вьюсет для обьектов модели Post."""
@@ -38,7 +42,7 @@ class CommentViewSet(viewsets.ModelViewSet):
 
     def get_post(self):
         """Возвращает объект текущей записи."""
-        post_id = self.kwargs.get("post_id")
+        post_id = self.kwargs.get('post_id')
         return get_object_or_404(Post, pk=post_id)
 
     def get_queryset(self):

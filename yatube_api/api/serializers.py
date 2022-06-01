@@ -1,4 +1,8 @@
 from posts.models import Comment, Follow, Group, Post, User
+"""
+У меня модели лежат в приложении posts.
+Не понимаю как их получить от туда по другому
+"""
 from rest_framework import serializers
 from rest_framework.validators import UniqueTogetherValidator
 
