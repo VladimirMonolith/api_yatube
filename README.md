@@ -36,7 +36,7 @@ API для соцсети блогеров Yatube.Проект реализов�
 ``` source venv/Scripts/activate ``` 
 - Установите зависимости из файла requirements.txt:   
 ``` pip install -r requirements.txt ```
-- Перейдите в папку api_yatube_final/yatube_api.
+- Перейдите в папку api_yatube/yatube_api.
 - Примените миграции:   
 ``` python manage.py migrate ```
 - Выполните команду:   
